@@ -12,7 +12,7 @@ for(let i = 0; i < $lista.length; i++){
 //console.log(y);
 //console.log(y[0]);
 
-const $promedio = document.querySelector('#promedio');
+const $promedioDeLaLista = document.querySelector('#promedioDeLaLista');
 
 let promedio = 0;
 
@@ -22,10 +22,10 @@ for(let i = 0; i < y.length; i++){
 
 promedio = promedio / y.length;
 
-$promedio.innerText = `El promedio es ${promedio}`;
+$promedioDeLaLista.innerText = `El promedio de la lista es ${promedio}`;
 
 
-const $pequeño = document.querySelector('#pequeño');
+const $masPequeñoDeLalista = document.querySelector('#masPequeñoDeLaLista');
 
 let pequeño = y[0];
 
@@ -35,10 +35,10 @@ for(let i = 1; i < y.length; i++){
     }
 }
 
-$pequeño.innerText = `El numero mas pequeño es ${pequeño}`;
+$masPequeñoDeLalista.innerText = `El numero mas pequeño de la lista es ${pequeño}`;
 
 
-const $grande = document.querySelector('#grande');
+const $masGrandeDeLaLista = document.querySelector('#masGrandeDeLaLista');
 
 let grande = y[0];
 
@@ -48,10 +48,10 @@ for(let i = 1; i < y.length; i++){
     }
 }
 
-$grande.innerText = `El numero mas grande es ${grande}`;
+$masGrandeDeLaLista.innerText = `El numero mas grande de la lista es ${grande}`;
 
 
-const $frecuente = document.querySelector('#frecuente');
+const $masFrecuenteDeLaLista = document.querySelector('#masFrecuenteDeLaLista');
 
 const frecuente = [];
 let a = 0;
@@ -84,4 +84,4 @@ for(let i = 2; i < frecuente.length; i++){
 
 //console.log(numeroFrecuente);
 
-$frecuente.innerText = `El numero mas frecuente es ${numeroFrecuente}`;
+$masFrecuenteDeLaLista.innerText = `El numero mas frecuente de la lista es ${numeroFrecuente}`;
