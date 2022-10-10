@@ -27,8 +27,10 @@ const $botonCalcular = document.querySelector('#calcular-salario-mensual');
 $botonCalcular.onclick = function(){
   const $salarioAnual = document.querySelector('#salario-anual');
   const $salarioMensual = document.querySelector('#salario-mensual');
+  
+  const MESES_EN_UN_ANIO =  12;
 
-  $salarioMensual.value = $salarioAnual.value / 12;
+  $salarioMensual.value = $salarioAnual.value / MESES_EN_UN_ANIO;
 
   return false;
 
