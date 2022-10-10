@@ -22,16 +22,19 @@ $botonCalcular.onclick = function(){
     segundosTotales += Number($segundos[i].value);
   }
 
-  horasTotales = horasTotales * 60 * 60;
-  minutosTotales = minutosTotales * 60;
+  const MINUTOS_EN_UNA_HORA = 60;
+  const SEGUNDOS_EN_UN_MINUTO = 60;
+
+  horasTotales = horasTotales * MINUTOS_EN_UNA_HORA * SEGUNDOS_EN_UN_MINUTO;
+  minutosTotales = minutosTotales * SEGUNDOS_EN_UN_MINUTO;
   
   const tiempoTotalEnSegundos = horasTotales + minutosTotales + segundosTotales;
 
-  const minutos = Math.floor(tiempoTotalEnSegundos / 60);
-  const segundosFinales = tiempoTotalEnSegundos % 60;
+  const minutos = Math.floor(tiempoTotalEnSegundos / SEGUNDOS_EN_UN_MINUTO);
+  const segundosFinales = tiempoTotalEnSegundos % SEGUNDOS_EN_UN_MINUTO;
 
-  const horas = Math.floor(minutos / 60);
-  const minutosFinales = minutos % 60;
+  const horas = Math.floor(minutos / MINUTOS_EN_UNA_HORA);
+  const minutosFinales = minutos % MINUTOS_EN_UNA_HORA;
 
 
 
